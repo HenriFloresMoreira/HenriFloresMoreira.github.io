@@ -1,0 +1,19 @@
+@CHARSET "ISO-8859-1";
+
+h1{
+	text-align: center;
+}
+
+.text{
+	text-align: center;
+}
+
+.list{
+	float: right;
+	padding-right: 100px;
+}
+
+.step{
+	float: left;
+	padding-left: 20px;
+}
