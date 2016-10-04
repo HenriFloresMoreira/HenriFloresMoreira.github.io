@@ -1,0 +1,26 @@
+@CHARSET "ISO-8859-1";
+
+h1 {
+	text-align: center; 
+}
+
+h2 {
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
+
+img {
+	width: 130px;
+	height: 130px;
+	float: right;
+	position: fixed;
+	right: 10px;
+	top: 75px;
+	z-index: -1;
+	padding-right: 100px;
+	padding-bottom: 100px;
+}
+
