@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+
+function num(param1){
+	if(document.getElementById("radio1").checked == true){
+		var numberInText = document.calc.textBox1.value;
+		var num = numberInText + param1.value;
+		var check = num.length;
+		if(check > 8){
+			return alert("Number To Big");
+		}
+		document.calc.textBox1.value = num;
+	}
+	if(document.getElementById("radio2").checked == true){
+		var numberInText = document.calc.textBox2.value;
+		var num = numberInText + param1.value;
+		var check = num.length;
+		if(check > 8){
+			return alert("Number To Big");
+		}
+		document.calc.textBox2.value = num;
+	}
+}
+
+function decimal(){
+	if(document.getElementById("radio1").checked == true){
+		var numberInText = document.calc.textBox1.value;
+		var decimal = numberInText + ".";
+		document.calc.textBox1.value = decimal;
+	}
+	if(document.getElementById("radio2").checked == true){
+		var numberInText = document.calc.textBox2.value;
+		var decimal = numberInText + ".";
+		document.calc.textBox2.value = decimal;
+	}
+}
+
+function add(){
+	var num1 = parseFloat(document.calc.textBox1.value);
+	var num2 = parseFloat(document.calc.textBox2.value);
+	var sum = num1 + num2;
+	document.calc.textBox3.value = sum;
+}
+
+function sub(){
+	var num1 = parseFloat(document.calc.textBox1.value);
+	var num2 = parseFloat(document.calc.textBox2.value);
+	var difference = num1 - num2;
+	document.calc.textBox3.value = difference;
+}
+
+function mul(){
+	var num1 = parseFloat(document.calc.textBox1.value);
+	var num2 = parseFloat(document.calc.textBox2.value);
+	var product = num1 * num2;
+	document.calc.textBox3.value = product;
+}
+
+function div(){
+	var num1 = parseFloat(document.calc.textBox1.value);
+	var num2 = parseFloat(document.calc.textBox2.value);
+	var quotient = num1 / num2;
+	document.calc.textBox3.value = quotient;
+}
+
+</script>
+<meta charset="ISO-8859-1">
+<title>Calculator</title>
+</head>
+<body>
+<form name=calc>
+	<input type="radio" name="text" id="radio1" value=""><input type="text" name="textBox1" id="textBox1" value=""><br><br>
+	<input type="radio" name="text" id="radio2" value=""><input type="text" name="textBox2" id="textBox2" value=""><br><br>
+	<input type="button" name="button1"
+	value="1"
+	onclick="num(this)"/>
+	<input type="button" name="button2"
+	value="2"
+	onclick="num(this)"/>
+	<input type="button" name="button3"
+	value="3"
+	onclick="num(this)"/>
+	<input type="button" name="addButton"
+	value="+"
+	onclick="add()"/>
+	<br><br>
+	<input type="button" name="button4"
+	value="4"
+	onclick="num(this)"/>
+	<input type="button" name="button5"
+	value="5"
+	onclick="num(this)"/>
+	<input type="button" name="button6"
+	value="6"
+	onclick="num(this)"/>
+	<input type="button" name="subButton"
+	value="-"
+	onclick="sub()"/>
+	<br><br>
+	<input type="button" name="button7"
+	value="7"
+	onclick="num(this)"/>
+	<input type="button" name="button8"
+	value="8"
+	onclick="num(this)"/>
+	<input type="button" name="button9"
+	value="9"
+	onclick="num(this)"/>
+	<input type="button" name="mulButton"
+	value="*"
+	onclick="mul()"/>
+	<br><br>
+	<input type="button" name="button0"
+	value="0"
+	onclick="num(this)"/>
+	<input type="button" name="buttonNull2"
+	value="."
+	onclick="decimal()"/>
+	<input type="reset" name="buttonNull1"
+	value="C"/>
+	<input type="button" name="divButton"
+	value="/"
+	onclick="div()"/>
+	<br><br>
+	Result:<input type="text" name="textBox3" id="textBox3" value="">
+
+</form>
+</body>
+</html>
