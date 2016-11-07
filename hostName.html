@@ -7,7 +7,9 @@
 <body>
 <p id="demo"></p>
 <script type="text/javascript">
-	document.getElementById("demo").innerHTML = "Hostname is " + window.location.hostname + " Navigator appName " + navigator.appName;
+	document.getElementById("demo").innerHTML = "Hostname is " + window.location.hostname + " Navigator App Name " + navigator.appName 
+		+ " App code name " + navigator.appCodeName + " Platform " + navigator.platform + " Cookie enabled " 
+		+ navigator.cookieEnabled + " Language " + navigator.language + " Java Enabled " + navigator.javaEnabled();
 </script>
 </body>
 </html>
